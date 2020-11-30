@@ -14,20 +14,43 @@ class MainController extends Controller
 //        $categories = Category::query()->get();
 //        dd($categories);
 
-//        $posts = Post::query()->get();
-//        dd($posts);
+        $posts = Post::query()->get();
+        //dd($posts);
 
 //        $posts = Post::query()->with('Category')->get();
 //        $category = $posts[0]->Category;
 //        dd($category->name);
 
-        $posts = Post::query()->with('Tags')->get();
+        //$posts = Post::query()->with('Tags')->get();
 
-        foreach ($posts[0]->Tags as $tag) {
-            echo $tag->name. '<br />';
-        }
+        //foreach ($posts[0]->Tags as $tag) {
+        //    echo $tag->name. '<br />';
+        //}
 
-        dd($posts);
-        return 1;
+        //dd($posts);
+        return view('post.index', ['item'=> $posts[0]]);
+    }
+
+    public function List(Request $request)
+    {
+//        $categories = Category::query()->get();
+//        dd($categories);
+
+        $posts = Post::query()->paginate(10);
+        //dd($posts);
+
+//        $posts = Post::query()->with('Category')->get();
+//        $category = $posts[0]->Category;
+//        dd($category->name);
+
+        //$posts = Post::query()->with('Tags')->get();
+
+        //foreach ($posts[0]->Tags as $tag) {
+        //    echo $tag->name. '<br />';
+        //}
+
+        //dd($posts);
+        return view('post.list', ['posts'=> $posts,
+            'title'=> 'Список постів']);
     }
 }
