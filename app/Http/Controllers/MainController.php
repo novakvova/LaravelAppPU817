@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Models\Post;
+use App\Models\Tag;
 
 class MainController extends Controller
 {
@@ -36,7 +37,12 @@ class MainController extends Controller
     {
 //        $categories = Category::query()->get();
 //        dd($categories);
+        $tag = new Tag();
+        $tag->name="asdfadf";
+        $tag->description= "555555";
+        $tag->url= "7777";
 
+        $tag->save();
         $posts = Post::query()->paginate(10);
         //dd($posts);
 
