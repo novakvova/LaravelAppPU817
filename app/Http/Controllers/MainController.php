@@ -28,7 +28,8 @@ class MainController extends Controller
         //}
 
         //dd($posts);
-        return view('post.index', ['item'=> $posts[0]]);
+        return view('post.index', ['posts'=> $posts,
+            'title'=> 'Список постів']);
     }
 
     public function List(Request $request)

@@ -2,15 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b7b3fc0-f8c0-4abb-a9f2-ef525bc9e3f6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/style.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/_navbar.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/_footer.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/_header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MainController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/post/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/post/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +164,7 @@
       <option name="presentableId" value="Default" />
       <updated>1606742067711</updated>
       <workItem from="1606742068794" duration="4740000" />
-      <workItem from="1606834293179" duration="3655000" />
+      <workItem from="1606834293179" duration="8710000" />
     </task>
     <servers />
   </component>
@@ -173,13 +172,13 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="402" y="0" key="CommitChangelistDialog2" timestamp="1606837159626">
+    <state x="402" y="0" key="CommitChangelistDialog2" timestamp="1606917172677">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="402" y="0" key="CommitChangelistDialog2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1606837159626" />
-    <state x="598" y="357" key="NewPhpFileDialog" timestamp="1606836837025">
+    <state x="402" y="0" key="CommitChangelistDialog2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1606917172677" />
+    <state x="598" y="357" key="NewPhpFileDialog" timestamp="1606916861983">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="598" y="357" key="NewPhpFileDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1606836837025" />
+    <state x="598" y="357" key="NewPhpFileDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1606916861983" />
   </component>
 </project>
