@@ -32,6 +32,11 @@ class MainController extends Controller
         return view('post.index', ['posts'=> $posts,
             'title'=> 'Список постів']);
     }
+    public function Create(Request $request)
+    {
+
+        return view('post.create', ['title'=> 'Додати пост']);
+    }
 
     public function List(Request $request)
     {

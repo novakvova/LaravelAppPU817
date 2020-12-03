@@ -19,3 +19,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [\App\Http\Controllers\MainController::class, 'Index']);
 Route::get('/posts', [\App\Http\Controllers\MainController::class, 'List']);
+Route::get('/posts/create', [\App\Http\Controllers\MainController::class, 'Create']);
