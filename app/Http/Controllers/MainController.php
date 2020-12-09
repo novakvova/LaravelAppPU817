@@ -35,7 +35,33 @@ class MainController extends Controller
     public function Create(Request $request)
     {
 
-        return view('post.create', ['title'=> 'Додати пост']);
+        $posts = Post::query()->paginate(10);
+        $categories = Category::query()->get();
+        // Post::query()->array_push($posts );
+        return view('post.create', ['posts' => $posts, 'categories' => $categories, 'title' => 'Додати пост']);
+    }
+
+    public function Store(Request $request)
+    {
+         $request->validate([
+             'title' => 'required',
+             'description' => 'required',
+             'description_short' => 'required',
+             'url' => 'required',
+             'id_category' => 'required'
+         ]);
+        // dd($request);
+
+        Post::create([
+            'title'=> $request->title,
+            'description'=> $request->description,
+            'description_short' => $request->description_short,
+            'url' => $request->url,
+            'id_category' => $request->id_category
+        ]);
+
+        return redirect()->route('post.list')
+            ->with('success', 'Post created successfully.');
     }
 
     public function List(Request $request)

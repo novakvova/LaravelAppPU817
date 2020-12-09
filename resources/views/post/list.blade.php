@@ -7,8 +7,11 @@
 
         <li>
             <h3>{{ $post->title ?? '' }}</h3>
-            <p>{{ $post->description_short ?? '' }}</p>
+
         </li>
-    @endforeach
+    <div>
+        {!! $post->description ?? '' !!}
+    </div>
+@endforeach
 </ul>
 @endsection
