@@ -3,7 +3,7 @@
 @section('content')
     <h1>{{$title}}</h1>
 
-    <form method="post" action="{{ route('post.store') }}">
+    <form method="post" action="{{ route('post.store') }}" enctype="multipart/form-data">
         @csrf
         <div class="form-group row">
             <label for="title" class="col-sm-2 col-form-label">Title</label>
@@ -15,6 +15,13 @@
             <label for="description_short" class="col-sm-2 col-form-label">Short description</label>
             <div class="col-sm-10">
                 <input type="text" name="description_short" class="form-control" id="description_short" placeholder="Short description">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="image" class="col-sm-2 col-form-label">Choose Image</label>
+            <div class="col-sm-10">
+                <input id="image" type="file" name="image">
             </div>
         </div>
 {{--        <div class="form-group row">--}}
@@ -59,13 +66,24 @@
 
     <!-- Initialize the editor. -->
     <script>
+        //var csrf_token = $('meta[name="csrf-token"]').attr('content');
         new FroalaEditor('#description', {
+            attribution: false,
             // Set the file upload URL.
-            // imageUploadURL: '/upload_image.php',
-            //
-            // imageUploadParams: {
-            //     id: 'my_editor'
-            // }
-        })
+            imageUploadURL: '/posts/upload',
+
+            imageUploadParams: {
+                id: 'my_editor',
+                _token: "{{ csrf_token() }}"
+            },
+        });
+        //setTimeout(() => document.querySelector("div.fr-wrapper.show-placeholder > div").style.display = 'none', 400);
+
     </script>
+    <style>
+        div.fr-wrapper.show-placeholder > div:first-child {
+            display: none !important;
+            visibility: hidden !important;
+        }
+    </style>
 @endsection
